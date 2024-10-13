@@ -1,0 +1,32 @@
+{
+  "name": "proactime",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev:next": "next dev",
+    "dev:electron": "npm run build:ts-electron && npm run start:electron",
+    "build:next": "next build",
+    "build:ts-electron": "tsc src/electron/index.ts --outDir build-electron",
+    "start:next": "next start",
+    "start:electron": "electron build-electron/index.js",
+    "lint:next": "next lint",
+    "lint": "npx @biomejs/biome lint",
+    "format": "npx @biomejs/biome format",
+    "check": "npx @biomejs/biome check"
+  },
+  "dependencies": {
+    "next": "14.2.15",
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.3",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "electron": "^32.2.0",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
+  }
+}
