@@ -25,7 +25,8 @@
     "rules": {
       "all": true,
       "correctness": {
-        "noNodejsModules": "off"
+        "noNodejsModules": "off",
+        "useImportExtensions": "off"
       },
       "style": {
         "noDefaultExport": "off"

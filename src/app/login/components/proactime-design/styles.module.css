@@ -1,0 +1,53 @@
+.proactimeDesign {
+  flex: 1 1 0;
+  display: flex;
+  align-items: center;
+  padding: 40px;
+  position: relative;
+  overflow: hidden;
+  max-width: 655px;
+  color: var(--white-50);
+  background: var(--gulf-blue-950);
+  background: linear-gradient(
+    180deg,
+    var(--gulf-blue-950) 0%,
+    var(--gulf-blue-700) 100%
+  );
+}
+
+.proactimeDesign article {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  transform: translateY(-100px);
+}
+
+.figure {
+  position: absolute;
+  width: 250px;
+  height: 350px;
+  border-radius: 40px;
+  background: var(--gray-200);
+  background: linear-gradient(
+    180deg,
+    rgba(217, 217, 217, 0.75) 0%,
+    rgba(217, 217, 217, 0.2) 100%
+  );
+}
+
+.figure:nth-child(2) {
+  top: 0;
+  left: 0;
+  transform: translate(-50px, -75px) rotate(127deg);
+}
+
+.figure:nth-child(3) {
+  right: 0;
+  transform: translate(150px, -100px) rotate(37deg);
+}
+
+.figure:nth-child(4) {
+  bottom: 0;
+  left: 0;
+  transform: translate(-30px, 30px) rotate(37deg);
+}
