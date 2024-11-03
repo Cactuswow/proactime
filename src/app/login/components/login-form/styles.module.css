@@ -1,4 +1,38 @@
 .loginForm {
-  background: var(--gray-200);
   flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form p {
+  text-align: right;
+  color: var(--azure-radiance-400);
+  cursor: pointer;
+}
+
+.form input {
+  background: var(--hawkes-blue-200);
+  padding: 10px;
+  border-radius: 5px;
+  color: var(--azure-radiance-400);
+  outline: none;
+}
+
+.form input::placeholder {
+  color: var(--azure-radiance-400);
+}
+
+.form button {
+  background-color: var(--gulf-blue-800);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
 }
