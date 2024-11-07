@@ -1,0 +1,17 @@
+.link {
+  transition: color 0.3s;
+  position: relative;
+}
+
+.link:hover {
+  color: var(--azure-radiance-400);
+}
+
+.linkActive::before {
+  content: '';
+  width: 100%;
+  height: 3px;
+  background: var(--gulf-blue-700);
+  position: absolute;
+  bottom: -18px;
+}

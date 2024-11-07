@@ -1,4 +1,5 @@
 'use client'
+import { useRouter } from 'next/navigation'
 import type { FormEvent } from 'react'
 import loginStyles from '../../styles.module.css'
 import { mockUsers } from './constants'
@@ -6,6 +7,7 @@ import styles from './styles.module.css'
 
 export function LoginForm() {
   const figureStyles = `${loginStyles.figure} ${styles.figure}`
+  const router = useRouter()
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
@@ -14,10 +16,12 @@ export function LoginForm() {
     const password = formData.get('password')
 
     const user = mockUsers.find(
-      (user) => user.email === email && user.password === password
+      user => user.email === email && user.password === password
     )
 
-    console.log(user)
+    if (user) {
+      return router.push('/application/critical-path')
+    }
   }
 
   return (
