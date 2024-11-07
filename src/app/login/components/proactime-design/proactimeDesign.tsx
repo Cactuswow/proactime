@@ -1,6 +1,9 @@
+import loginStyles from '../../styles.module.css'
 import styles from './styles.module.css'
 
 export function ProactimeDesign() {
+  const figureStyles = `${loginStyles.figure} ${styles.figure}`
+
   return (
     <div className={styles.proactimeDesign}>
       <article>
@@ -10,9 +13,9 @@ export function ProactimeDesign() {
         </p>
       </article>
 
-      <span className={styles.figure} />
-      <span className={styles.figure} />
-      <span className={styles.figure} />
+      <span className={figureStyles} />
+      <span className={figureStyles} />
+      <span className={figureStyles} />
     </div>
   )
 }

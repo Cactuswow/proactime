@@ -22,19 +22,6 @@
   transform: translateY(-100px);
 }
 
-.figure {
-  position: absolute;
-  width: 250px;
-  height: 350px;
-  border-radius: 40px;
-  background: var(--gray-200);
-  background: linear-gradient(
-    180deg,
-    rgba(217, 217, 217, 0.75) 0%,
-    rgba(217, 217, 217, 0.2) 100%
-  );
-}
-
 .figure:nth-child(2) {
   top: 0;
   left: 0;

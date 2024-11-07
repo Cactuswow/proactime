@@ -2,8 +2,10 @@
   flex: 1 1 0;
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  padding: 50px 30px;
   gap: 20px;
+  position: relative;
+  overflow: hidden;
 }
 
 .form {
@@ -20,7 +22,7 @@
 
 .form input {
   background: var(--hawkes-blue-200);
-  padding: 10px;
+  padding: 20px;
   border-radius: 5px;
   color: var(--azure-radiance-400);
   outline: none;
@@ -32,7 +34,39 @@
 
 .form button {
   background-color: var(--gulf-blue-800);
-  color: white;
-  padding: 10px;
+  color: var(--white-50);
+  padding: 20px;
   border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.form button:hover {
+  background: var(--gulf-blue-700);
+}
+
+.figure {
+  background: #3565fc;
+  background: linear-gradient(
+    180deg,
+    rgba(53, 101, 252, 0.75) 0%,
+    rgba(53, 101, 252, 0.2) 100%
+  );
+}
+
+.figure:nth-child(5) {
+  bottom: 0;
+  right: 0;
+  transform: translate(40px, 75px);
+}
+
+.figure:nth-child(3) {
+  right: 0;
+  transform: translate(75px, -150px) rotate(37deg);
+}
+
+.figure:nth-child(4) {
+  bottom: 0;
+  left: 0;
+  height: 550px;
+  transform: translate(0px, 250px) rotate(127deg);
 }
