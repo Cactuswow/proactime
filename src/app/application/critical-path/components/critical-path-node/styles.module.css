@@ -1,0 +1,17 @@
+.node {
+  display: grid;
+  grid-template-columns: 2;
+  grid-template-rows: 2;
+  row-gap: 16px;
+}
+
+.node > span {
+  grid-row: 1;
+  grid-column: 1;
+  width: 300px;
+}
+
+.node > div {
+  grid-row: 2;
+  grid-column: 2;
+}

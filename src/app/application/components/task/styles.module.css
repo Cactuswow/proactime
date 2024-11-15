@@ -11,7 +11,7 @@
 }
 
 .taskView .container {
-  padding: 16px;
+  padding: 12px;
   flex: 1 1 0;
   z-index: 10;
 }
@@ -37,11 +37,11 @@
   background-color: var(--jordy-blue-400);
 }
 
-.critical {
+.warning {
   background-color: var(--lemon-300);
 }
 
-.warning {
+.critical {
   background-color: var(--sweet-pink-300);
 }
 

@@ -1,11 +1,17 @@
-import { TaskView } from '../components/task/task'
 import { mockTasks } from '../constants'
+import { CriticalPathTree } from './components/critical-path-tree/criticalPathTree'
+import { TaskList } from './components/task-list/taskList'
 
 export default function Page() {
   return (
-    <div className='p-10 flex flex-col gap-4'>
-      <TaskView task={mockTasks[0]} />
-      <TaskView task={mockTasks[1]} />
-    </div>
+    <main className='flex flex-1'>
+      <section className='flex-1 border-r-4 max-w-sm'>
+        <div className='p-4'>
+          <TaskList tasks={mockTasks} />
+        </div>
+      </section>
+
+      <CriticalPathTree />
+    </main>
   )
 }
