@@ -1,3 +1,11 @@
+import { CollaboratorView } from "./components/collaboratorView";
+
 export default function Page() {
-  return <div>Collaborators</div>
+  return (
+    <section className="flex flex-col gap-2 p-2">
+      <p >Lista de colaboradores</p>
+      <CollaboratorView/>
+
+    </section>
+  )
 }
