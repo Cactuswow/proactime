@@ -1,0 +1,50 @@
+.taskView {
+  display: flex;
+  background-color: var(--white-100);
+  border-radius: 7px;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.taskView:hover {
+  transform: translateY(-5px);
+}
+
+.taskView .container {
+  padding: 16px;
+  flex: 1 1 0;
+  z-index: 10;
+}
+
+.taskView .time {
+  max-width: 300px;
+  text-align: right;
+  position: relative;
+}
+
+.taskView .triangle {
+  content: '';
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  aspect-ratio: 1;
+  transform: translateX(-50%);
+}
+
+.normal {
+  background-color: var(--jordy-blue-400);
+}
+
+.critical {
+  background-color: var(--lemon-300);
+}
+
+.warning {
+  background-color: var(--sweet-pink-300);
+}
+
+.completed {
+  background-color: var(--moss-green-300);
+}

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { Poppins } from 'next/font/google'
 import './globals.css'
-import type { LayoutChildrenProps } from './constants'
+import type { LayoutChildrenProps } from './interfaces'
 
 export const metadata: Metadata = {
   title: 'Proactime',
