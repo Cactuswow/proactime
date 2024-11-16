@@ -5,18 +5,19 @@ interface Props {
   tasks: Task[]
 }
 export function TaskList({ tasks }: Props) {
-  return (
-    <div className='flex flex-col gap-4'>
-      {tasks.map(task => (
-        <>
-          <TaskView
-            key={task.id}
-            task={task}
-          />
+  return tasks.map(task => (
+    <>
+      <TaskView
+        key={task.id}
+        task={task}
+      />
 
-          {task.tasks && <TaskList tasks={task.tasks} />}
-        </>
-      ))}
-    </div>
-  )
+      {task.tasks && (
+        <TaskList
+          key={`${task.id} container`}
+          tasks={task.tasks}
+        />
+      )}
+    </>
+  ))
 }
