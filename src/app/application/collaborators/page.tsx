@@ -3,9 +3,11 @@ import { CollaboratorView } from './components/collaborators-view/collaboratorVi
 
 export default function Page() {
   return (
-    <section className='flex flex-col gap-2 p-2'>
-      <p>Lista de colaboradores</p>
-      <CollaboratorView user={mockUsers[0]}/>
-    </section>
+    <div className='flex justify-center'>
+      <section className='flex flex-col gap-2 p-2  max-w-7xl w-full'>
+        <p>Lista de colaboradores</p>
+        <CollaboratorView user={mockUsers[0]} />
+      </section>
+    </div>
   )
 }
