@@ -1,0 +1,28 @@
+.percentBar {
+  display: flex;
+  background-color: var(--white-100);
+  border-radius: 7px;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.percentBar:hover {
+  transform: scale(0.99);
+}
+
+.progress {
+  background-color: var(--jordy-blue-400);
+  position: relative;
+}
+
+.percentBar .triangle {
+  content: '';
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  aspect-ratio: 1;
+  transform: translateX(50%);
+  background: var(--jordy-blue-400);
+}

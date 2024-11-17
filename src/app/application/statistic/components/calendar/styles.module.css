@@ -7,12 +7,18 @@
   justify-content: center;
   align-items: center;
   border-radius: 5px;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 0.75rem;
+  transition: transform 0.3s;
+}
+
+.cell:hover {
+  transform: scale(0.95);
 }
 
 .headerCell {
   background-color: var(--jordy-blue-200);
+  font-weight: 600;
 }
 
 .notCurrentMonth {

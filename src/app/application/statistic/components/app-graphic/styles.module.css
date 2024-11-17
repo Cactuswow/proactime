@@ -1,0 +1,11 @@
+.appGraphic {
+  padding: 16px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--hawkes-blue-200);
+}
+
+.restricted {
+  background-color: var(--sweet-pink-300);
+}
