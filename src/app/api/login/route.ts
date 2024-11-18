@@ -7,5 +7,6 @@ export async function POST(req: Request) {
   const user = mockUsers.find(
     user => user.email === email && user.password === password
   )
+
   return NextResponse.json(user)
 }

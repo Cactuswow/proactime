@@ -11,7 +11,7 @@ export function CollaboratorSearch() {
       />
       <button
         type='submit'
-        className='p-3 px-3 bg-[--jordy-blue-200] rounded-md'
+        className='p-3 px-3 bg-[--jordy-blue-200] rounded'
       >
         Agregar Colaborador
       </button>

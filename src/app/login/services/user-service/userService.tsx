@@ -1,10 +1,10 @@
 'use client'
 
 import { useEffect } from 'react'
-import { userService } from './userService'
+import { useUserService } from './userServiceHook'
 
 export function UserService() {
-  const { fetchUser } = userService()
+  const { fetchUser } = useUserService()
 
   useEffect(() => {
     fetchUser()

@@ -6,7 +6,7 @@ interface Props {
 
 export function CollaboratorView({ user }: Props) {
   return (
-    <div className='flex bg-[var(--white-100)] gap-4  p-2 rounded-sm'>
+    <div className='flex bg-[var(--white-100)] gap-4 p-2 rounded-sm'>
       <img
         src={user.image}
         alt=''

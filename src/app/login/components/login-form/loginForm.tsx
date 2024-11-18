@@ -1,25 +1,23 @@
 'use client'
+
 import { useRouter } from 'next/navigation'
 import type { FormEvent } from 'react'
+import { useUserService } from '../../services/user-service/userServiceHook'
 import loginStyles from '../../styles.module.css'
-import { mockUsers } from './constants'
 import styles from './styles.module.css'
 
 export function LoginForm() {
-  const figureStyles = `${loginStyles.figure} ${styles.figure}`
   const router = useRouter()
+  const { login } = useUserService()
+  const figureStyles = `${loginStyles.figure} ${styles.figure}`
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
     const formData = new FormData(event.currentTarget)
-    const email = formData.get('email')
-    const password = formData.get('password')
+    const email = formData.get('email') as string
+    const password = formData.get('password') as string
 
-    const user = mockUsers.find(
-      user => user.email === email && user.password === password
-    )
-
-    if (user) {
+    if (await login(email, password)) {
       return router.push('/application/critical-path')
     }
   }
