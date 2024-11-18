@@ -9,7 +9,8 @@ export function CollaboratorsDelete() {
       </div>
       <button
         type='submit'
-        className='bg-[var(--sweet-pink-300)] w-40 rounded-sm p-2'>
+        className='bg-[var(--sweet-pink-300)] w-40 rounded-sm p-2'
+      >
         Eliminar
       </button>
     </div>

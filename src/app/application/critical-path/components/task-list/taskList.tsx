@@ -1,23 +1,10 @@
-import type { Task } from '@/app/application/components/task/interfaces'
-import { TaskView } from '../../../components/task/task'
+'use client'
 
-interface Props {
-  tasks: Task[]
-}
-export function TaskList({ tasks }: Props) {
-  return tasks.map(task => (
-    <>
-      <TaskView
-        key={task.id}
-        task={task}
-      />
+import { useCriticalPathService } from '@/app/application/services/critical-path-service/criticalPathServiceHook'
 
-      {task.tasks && (
-        <TaskList
-          key={`${task.id} container`}
-          tasks={task.tasks}
-        />
-      )}
-    </>
-  ))
+import { RecursiveTaskList } from './components/recursive-task-list/recursiveTaskList'
+
+export function TaskList() {
+  const { tasks } = useCriticalPathService()
+  return <RecursiveTaskList tasks={tasks} />
 }

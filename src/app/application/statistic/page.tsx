@@ -1,4 +1,3 @@
-import { mockTasks } from '../constants'
 import { TaskList } from '../critical-path/components/task-list/taskList'
 import { AppGraphic } from './components/app-graphic/appGraphic'
 import { Calendar } from './components/calendar/calendar'
@@ -19,7 +18,7 @@ export default function Page() {
           Calendario ({months[date.getMonth()]} {date.getFullYear()})
         </p>
         <Calendar />
-        <TaskList tasks={mockTasks} />
+        <TaskList />
       </div>
     </main>
   )
