@@ -9,7 +9,7 @@ export function CollaboratorView({ user }: Props) {
     <div className='flex bg-[var(--white-100)] gap-4 p-2 rounded-sm'>
       <img
         src={user.image}
-        alt=''
+        alt={user.name}
         className='h-12 w-12 rounded-full object-cover'
       />
 

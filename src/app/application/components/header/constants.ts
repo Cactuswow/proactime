@@ -12,7 +12,7 @@ export const headerLinks = [
     link: '/application/collaborators'
   },
   {
-    name: 'configuración',
+    name: 'Configuración',
     link: '/application/configuration'
   }
 ]

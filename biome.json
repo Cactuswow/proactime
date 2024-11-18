@@ -7,7 +7,12 @@
   },
   "files": {
     "ignoreUnknown": false,
-    "ignore": ["./node_modules", "./build-electron", "./.next"]
+    "ignore": [
+      "./node_modules",
+      "./build-electron",
+      "./.next",
+      "./next.config.mjs"
+    ]
   },
   "formatter": {
     "enabled": true,

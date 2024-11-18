@@ -4,8 +4,13 @@
   display: flex;
   justify-content: space-between;
   background-color: var(--hawkes-blue-200);
+  transition: transform 0.3s;
 }
 
 .restricted {
   background-color: var(--sweet-pink-300);
+}
+
+.appGraphic:hover {
+  transform: translateY(-5px);
 }

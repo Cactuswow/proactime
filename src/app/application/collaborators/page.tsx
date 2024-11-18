@@ -3,7 +3,7 @@ import { CollaboratorSearch } from './components/collaborators-search/collaborat
 
 export default function Page() {
   return (
-    <div className='flex justify-center'>
+    <div className='flex justify-center p-7'>
       <section className='flex flex-col gap-3 p-2 max-w-7xl w-full'>
         <CollaboratorSearch />
 

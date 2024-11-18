@@ -1,11 +1,14 @@
-import { mockUsers } from '@/app/login/components/login-form/constants'
+import type { User } from '@/app/login/components/login-form/interfaces'
 import { CollaboratorView } from '../collaborators-view/collaboratorView'
 
-export function CollaboratorsDelete() {
+interface Props {
+  user: User
+}
+export function CollaboratorsDelete({ user }: Props) {
   return (
     <div className='flex'>
       <div className='flex-1'>
-        <CollaboratorView user={mockUsers[0]} />
+        <CollaboratorView user={user} />
       </div>
       <button
         type='submit'
