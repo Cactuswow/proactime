@@ -18,8 +18,11 @@
 
 .time {
   max-width: 300px;
-  text-align: right;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  z-index: 0;
 }
 
 .triangle {

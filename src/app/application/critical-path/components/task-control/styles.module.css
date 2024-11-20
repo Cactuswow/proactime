@@ -1,0 +1,16 @@
+.control {
+  background: var(--white-100);
+  padding: 10px;
+  display: flex;
+  justify-content: end;
+  gap: 20px;
+  @apply border-b-4;
+}
+
+.control button {
+  transition: transform 0.3s;
+}
+
+.control button:hover {
+  transform: scale(0.9) rotate(15deg);
+}

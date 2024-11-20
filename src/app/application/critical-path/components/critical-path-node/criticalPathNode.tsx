@@ -1,5 +1,6 @@
 import type { Task } from '@/app/application/components/task/interfaces'
 import { TaskView } from '@/app/application/components/task/task'
+import type { CSSProperties } from 'react'
 import styles from './styles.module.css'
 
 interface Props {
@@ -10,6 +11,11 @@ export function CriticalPathNode({ tasks }: Props) {
     <div
       key={task.id}
       className={styles.node}
+      style={
+        {
+          '--extra-width': `${task.duration * 30}px`
+        } as CSSProperties
+      }
     >
       <span>
         <TaskView task={task} />

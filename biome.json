@@ -38,6 +38,9 @@
       },
       "suspicious": {
         "noReactSpecificProps": "off"
+      },
+      "a11y": {
+        "useKeyWithClickEvents": "off"
       }
     }
   },
