@@ -1,7 +1,7 @@
 import { create } from 'zustand'
 import type { UserService } from './interfaces'
 
-export const useUserService = create<UserService>(set => ({
+export const useUserService = create<UserService>((set, get) => ({
   user: {} as UserService['user'],
   users: [],
   fetchUser: async () => {
@@ -26,5 +26,10 @@ export const useUserService = create<UserService>(set => ({
     } catch {
       return false
     }
+  },
+  deleteUser: (id: number) => {
+    const { users } = get()
+    const newUsers = users.filter(user => user.id !== id)
+    set({ users: newUsers })
   }
 }))

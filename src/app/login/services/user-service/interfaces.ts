@@ -5,4 +5,5 @@ export interface UserService {
   users: User[]
   fetchUser: () => Promise<void>
   login: (email: string, password: string) => Promise<boolean>
+  deleteUser: (id: number) => void
 }

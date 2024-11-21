@@ -11,12 +11,12 @@ export function CollaboratorsList() {
   const Collaborator =
     user.role === 'admin' ? CollaboratorsDelete : CollaboratorView
 
-  return users.map(user => (
-    <div
-      key={user.id}
+  return users.map(usr => (
+    usr.id !== user.id && <div
+      key={usr.id}
       className={styles.collaborator}
     >
-      <Collaborator user={user} />
+      <Collaborator user={usr} />
     </div>
   ))
 }
