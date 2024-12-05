@@ -9,7 +9,7 @@ export async function GET() {
   user_type as role,
   user_password as password,
   user_profile_picture as image
-  from users`
+  from path_users`
 
   return NextResponse.json(rows)
 }

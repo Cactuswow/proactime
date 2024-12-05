@@ -14,7 +14,8 @@ export function parseTask(rawTasks: RawTask[]): Task[] {
       endDate: new Date(rawTask.endDate),
       duration: Number(rawTask.duration),
       state: rawTask.state,
-      tasks: []
+      tasks: [],
+      dependency: rawTask.dependency ? Number(rawTask.dependency) : undefined
     }
 
     tasksMap.set(task.id, task)

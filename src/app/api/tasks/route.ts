@@ -8,8 +8,8 @@ export async function GET() {
   task_id as id,
   task_name as name,
   task_description as description,
-  task_start_date as startDate,
-  task_end_date as endDate,
+  TO_CHAR(task_start_date, 'YYYY-MM-DD') as "startDate",
+  TO_CHAR(task_end_date, 'YYYY-MM-DD') as "endDate",
   task_duration as duration,
   task_state as state,
   task_dependency as dependency
@@ -64,8 +64,7 @@ export async function PUT(request: Request) {
 export async function DELETE(request: Request) {
   const body = await request.json()
 
-  const { rows } =
-    await sql`select task_dependency from tasks where task_id = ${body.id}`
+  const { rows } = await sql`delete from tasks where task_id = ${body.id}`
 
   return NextResponse.json(rows)
 }

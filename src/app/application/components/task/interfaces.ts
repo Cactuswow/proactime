@@ -5,6 +5,7 @@ export interface Task {
   startDate: Date
   endDate: Date
   duration: number
-  tasks?: Task[]
   state: 'normal' | 'critical' | 'warning' | 'completed'
+  tasks?: Task[]
+  dependency: number | undefined
 }

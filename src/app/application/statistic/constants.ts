@@ -4,55 +4,55 @@ export const applications: Application[] = [
   {
     id: 1,
     name: 'Word',
-    time: 5,
+    time: 15,
     permitted: true
   },
   {
     id: 2,
     name: 'Excel',
-    time: 10,
+    time: 3,
     permitted: true
   },
   {
     id: 3,
     name: 'PowerPoint',
-    time: 15,
+    time: 2,
     permitted: true
   },
   {
     id: 4,
     name: 'Outlook',
-    time: 20,
+    time: 3,
     permitted: true
   },
   {
     id: 5,
-    name: 'OneNote',
-    time: 25,
+    name: 'Youtube',
+    time: 20,
     permitted: false
   },
   {
     id: 6,
-    name: 'Access',
-    time: 30,
+    name: 'Steam',
+    time: 10,
     permitted: false
   },
   {
     id: 7,
-    name: 'Publisher',
-    time: 35,
+    name: 'Facebook',
+    time: 5,
     permitted: false
   },
   {
     id: 8,
-    name: 'Visio',
-    time: 40,
+    name: 'Instagram',
+    time: 2,
     permitted: false
   },
   {
     id: 9,
     name: 'Project',
-    time: 45,
+    time: 5,
     permitted: false
   },
   {

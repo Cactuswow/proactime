@@ -10,9 +10,5 @@ export const headerLinks = [
   {
     name: 'Colaboradores',
     link: '/application/collaborators'
-  },
-  {
-    name: 'Configuración',
-    link: '/application/configuration'
   }
 ]

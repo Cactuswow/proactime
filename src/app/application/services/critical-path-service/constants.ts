@@ -1,4 +1,4 @@
-import type { Task } from '../../components/task/interfaces'
+import type { RawTask } from '@/app/api/tasks/interfaces'
 
 export async function fetchTask() {
   const response = await fetch('/api/tasks')
@@ -6,7 +6,7 @@ export async function fetchTask() {
   return tasks
 }
 
-export async function addTask(task: Task) {
+export async function addTask(task: RawTask) {
   const response = await fetch('/api/tasks', {
     method: 'POST',
     headers: {
@@ -20,13 +20,16 @@ export async function addTask(task: Task) {
 }
 
 export async function deleteTask(id: string) {
-  await fetch(`/api/tasks/${id}`, {
-    method: 'DELETE'
+  await fetch('/api/tasks/', {
+    method: 'DELETE',
+    body: JSON.stringify({
+      id
+    })
   })
 }
 
-export async function updateTask(task: Task) {
-  const response = await fetch(`/api/tasks/${task.id}`, {
+export async function updateTask(task: RawTask) {
+  const response = await fetch('/api/tasks/', {
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json'

@@ -9,7 +9,7 @@ export function CriticalPathPercent() {
         <span className={`${styles.triangle}`} />
       </div>
 
-      <p className={`${taskStyles.container} text-right`}>80%</p>
+      <p className={`${taskStyles.container} text-right`}>83%</p>
     </div>
   )
 }

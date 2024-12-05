@@ -13,7 +13,7 @@ export function AppGraphic() {
             key={app.id}
           >
             <p>{app.name}</p>
-            <p>({app.time})</p>
+            <p>{app.time} min</p>
           </div>
         ))}
       </div>
